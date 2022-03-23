@@ -13,3 +13,6 @@ class Post(models.Model): #inheritance
     author = models.ForeignKey(to=User, on_delete=models.CASCADE)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    def __str__(self):
+        return self.title
+
